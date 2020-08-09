@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logoImg from '../../assets/images/logo.svg';
 import landingImg from '../../assets/images/landing.svg';
 import studyIcon from '../../assets/images/icons/study.svg';
@@ -6,6 +7,10 @@ import giveClasses from '../../assets/images/icons/give-classes.svg';
 import purpleHearIcon from '../../assets/images/icons/purple-heart.svg';
 import './styles.css';
 
+/**
+ * Para ser SPA(Single Page Application) é necessário trocar as tags <a></a>
+ * por Link do react-router-doom
+ */
 function Landing() {
     return (
         <div id="page-landing">
@@ -21,15 +26,15 @@ function Landing() {
                     className="hero-image" />
 
                 <div className="buttons-container">
-                    <a href="" className="study">
+                    <Link to="/study" className="study">
                         <img src={studyIcon} alt="Estudar" />
                         Estudar
-                    </a>
+                    </Link>
 
-                    <a href="" className="give-classes">
+                    <Link to="/give-classes" className="give-classes">
                         <img src={giveClasses} alt="Dar aulas" />
                         Dar aulas
-                    </a>
+                    </Link>
                 </div>
 
                 <span className="total-connections">
